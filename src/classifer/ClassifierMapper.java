@@ -69,7 +69,7 @@ public class ClassifierMapper extends Mapper<Text, Text, Text, IntWritable> {
 		if ("bayes".equalsIgnoreCase(params.get("classifierType"))) {
 			algorithm = new BayesAlgorithm();
 			datastore = new InMemoryBayesDatastore(params);
-		} else if ("cbyes".equalsIgnoreCase(params.get("classifierType"))) {
+		} else if ("cbayes".equalsIgnoreCase(params.get("classifierType"))) {
 			algorithm = new CBayesAlgorithm();
 			datastore = new InMemoryBayesDatastore(params);
 		} else {
